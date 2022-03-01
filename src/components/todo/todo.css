@@ -1,0 +1,14 @@
+.todo__filter {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+.todo__filter > * {
+    width: 100px;
+    height: 40px;
+    border: 1px solid lightblue;
+    background-color: transparent;
+    border-radius: 20px;
+
+}
