@@ -1,16 +1,110 @@
-.hero__section {
-    background-color: lightblue;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    height: 25%;
+.hero {
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 25%;
+    background-color: grey;
+    /* border-top-left-radius: 15px;
+    border-top-right-radius: 15px; */
     color: rgb(255, 255, 255);
+    font-weight: 600;
 }
 
-h1 {
+.hero__section {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__section_date {
+    font-size: 2rem;
+}
+
+.hero__weather {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.active {
+    opacity: 1;
+}
+
+.hero__weather_extra {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.hero__weather_temp {
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.query__form {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    top: 10px;
+    right: 10px;
     
+}
+
+.query__form input {
+    height: 30px;
+    width: 7rem;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.query__form button {
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+}
+
+.error__message {
+    opacity: 0;
+}
+
+@media screen and (max-width: 376px) {
+        .hero {
+            font-weight: 500;
+        }
+
+        .hero__section_date {
+            font-size: 1.5rem;
+        }
+
+        .hero__weather {
+            gap: 1rem;
+        }
+
+        .hero__weather_temp {
+            font-size: 4rem;
+        }
+
+        .hero__weather_extra {
+            font-size: 0.8rem;
+        }
+
+        .query__form {
+            top: 5px;
+            right: 5px;
+        }
+
+        .query__form input,
+        .query__form button {
+            height: 22px;
+        }
 }
 
