@@ -41,7 +41,7 @@ const Hero = (props) => {
         </form>
         <div className="hero__section">
             <div className="hero__section_date">{date.format("dddd").toUpperCase()}</div>
-            {(typeof weather.temp != "undefined") ? (<div className={`hero__weather ${weather.temp ? 'active' : ""}`}>
+            {(typeof weather?.temp != "undefined") ? (<div className={`hero__weather ${weather.temp ? 'active' : ""}`}>
                 <span className="hero__weather_temp">{Math.floor(weather.temp) ? Math.floor(weather.temp) : " "}&#176;</span>
                 <div className="hero__weather_extra">
                     <span className="hero__weather_max">Max: {Math.floor(weather.temp_max)}&#176;</span>
