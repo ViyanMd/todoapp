@@ -8,7 +8,7 @@ const api = {
 }
 
 
-const Hero = () => {
+const Hero = (props) => {
     const [weather, setWeather] = useState({})
     const [query, setQuery] = useState(' ');
     const [date, setDate] = useState(new DateObject());
@@ -35,10 +35,9 @@ const Hero = () => {
 
     console.log(date);
     return (
-        <div className="hero">
+        <div className="hero" style={{backgroundColor: props.theme}}>
         <form className="query__form" onSubmit={(e) => getWeather(e)}>
             <input type="text"  onChange={(e) =>handleQuery(e)}></input>
-            {/* <button type="button" onClick={getWeather}></button> */}
         </form>
         <div className="hero__section">
             <div className="hero__section_date">{date.format("dddd").toUpperCase()}</div>

@@ -4,11 +4,9 @@
     align-items: center;
     justify-content: center;
     height: 25%;
-    background-color: grey;
-    /* border-top-left-radius: 15px;
-    border-top-right-radius: 15px; */
     color: rgb(255, 255, 255);
     font-weight: 600;
+    transition: all 300ms ease-in-out;
 }
 
 .hero__section {

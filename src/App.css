@@ -5,18 +5,99 @@ body {
 #root {
     width: min(50rem, 100%);
     height: 90%;
+    position: relative;
+}
+
+.app {
     border-radius: 15px;
-    border: 2px solid grey;
+    border: 2px solid;
     -webkit-box-shadow: -3px 1px 27px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: -3px 1px 27px 0px rgba(34, 60, 80, 0.2);
     box-shadow: -3px 1px 27px 0px rgba(34, 60, 80, 0.2);
     overflow: hidden;
-}
-
-.app {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
+    transition: all 300ms ease-in-out;
 }
+
+.trigger {
+    z-index: 200;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+}
+
+.set__color {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 15px;
+    transform: scale(0) ;
+    transform-origin: left top;
+    transition: all 300ms ease-in-out;
+}
+
+.active {
+    transform: scale(1);
+}
+
+.set__color button {
+    border: none;
+    border-radius: 50%;
+}
+
+
+
+.black {
+    background-color: #000;
+}
+
+.grey {
+    background-color: #c1c1c3;
+}
+
+.red {
+    background-color: #C54E57;
+}
+
+.orange {
+    background-color: #FF9637;
+}
+
+.yellow {
+    background-color: #e6c60d;
+}
+
+.green {
+    background-color: #628E38;
+}
+
+.blue {
+    background-color: #1167b1;
+}
+
+.purple {
+    background-color: #5e3165;
+}
+
+.brown {
+    background-color: #382b2b;
+}
+
