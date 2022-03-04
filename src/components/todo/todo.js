@@ -74,9 +74,9 @@ const ToDo = (props) => {
                     <button style={{color: props.theme, borderColor: props.theme}} className="btn__filter" onClick={(e) => showInProcess(e)}>In Process</button>
                     <button style={{color: props.theme, borderColor: props.theme}} className="btn__filter" onClick={(e) => showCompleted(e)}>Completed</button>  
             </div>
-            <form className="todo__form">
+            <form className="todo__form" onSubmit={addItem}>
                 <input type="text" value={input} placeholder="What's your plan for today ?" onChange={handleInput} ></input>
-                <button style={{color: props.theme, borderColor: props.theme}} type="button" onClick={addItem} disabled={input.length < 1 ? true : false}>Add</button>
+                <button style={{color: props.theme, borderColor: props.theme}} type="submit"  disabled={input.length < 1 ? true : false}>Add</button>
             </form>
             <div className="todo__list">
                 <ul>
