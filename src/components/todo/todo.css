@@ -26,7 +26,7 @@
 .todo__filter >*:hover,
 .todo__item button:hover,
 .todo__form button:hover {
-    transform: translateY(-3px);
+    transform: scale(105%);
 }
 
 .todo__form {
@@ -59,7 +59,17 @@
     margin: 0 auto;
     border-radius: 15px;
     margin-bottom: 10px;
+    transition: all 300ms ease-in-out;
 }
+
+.completed {
+    opacity: 0.3;
+}
+
+.todo__item.completed p {
+    text-decoration: line-through;
+}
+
 .todo__item p {
     text-align: left;
 }
@@ -79,7 +89,7 @@
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 426px) {
     .todo__section {
         padding: 1rem;
     }

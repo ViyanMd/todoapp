@@ -1,10 +1,11 @@
-import {React, useState} from "react";
+import {React, useState, useEffect} from "react";
 import './todo.css';
 
 const ToDo = (props) => {
     const [input, setInput] = useState("");
     const [todos, setTodos] = useState([]);
     const [filtered, setFiltered] = useState([]);
+
 
     function handleComplete(id) {
         let list = [...todos];
@@ -16,6 +17,7 @@ const ToDo = (props) => {
         })
         
         setTodos(updatedList);
+        setFiltered(updatedList);
     }
 
     function removeTodo(id) {
@@ -80,7 +82,7 @@ const ToDo = (props) => {
                 <ul>
                     {filtered.map(item => {
                         return (
-                        <li className='todo__item' key={item.id} style={{borderColor: props.theme}}>
+                        <li className={`todo__item ${item.completed ? "completed" : " "}`} key={item.id} style={{borderColor: props.theme}}>
                             <p>{item.value}</p>
                             <div className="todo__action">
                                 <button style={{color: props.theme, borderColor: props.theme}} className="todo__action_completed" onClick={() => handleComplete(item.id)}>Completed</button>

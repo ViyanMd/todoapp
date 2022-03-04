@@ -61,6 +61,11 @@
     backdrop-filter: blur(5px);
     padding: 0 1rem;
     text-align: center;
+    color: #fff
+}
+
+.query__form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .query__form button {
@@ -74,7 +79,7 @@
     opacity: 0;
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 426px) {
         .hero {
             font-weight: 500;
         }

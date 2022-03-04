@@ -5,7 +5,7 @@ import ToDo from "./components/todo/todo";
 
 
 function App() {
-  const [theme, setTheme] = useState('#000');
+  const [theme, setTheme] = useState('#37474f');
   const [menu, setMenu] = useState(false)
 
   function changeColor(e) {
@@ -19,9 +19,9 @@ function App() {
 
   return (
     <main className='app' style={{borderColor: theme}}>
-      <button className="trigger" onClick={openSettings}></button>
+      <button className="trigger" onClick={openSettings}>C</button>
       <div className={`set__color ${menu ? "active" : " "}`}>
-        <button value="#000" className="black" onClick={(e) => changeColor(e)}></button>
+        <button value="#37474f" className="black" onClick={(e) => changeColor(e)}></button>
         <button value="#c1c1c3" className="grey" onClick={(e) => changeColor(e)}></button>
         <button value="#C54E57" className="red" onClick={(e) => changeColor(e)}></button>
         <button value="#FF9637" className="orange" onClick={(e) => changeColor(e)}></button>
