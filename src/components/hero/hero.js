@@ -48,7 +48,7 @@ const Hero = (props) => {
                     <span className="hero__weather_min">Min: {Math.floor(weather.temp_min)}&#176;</span>
                     <span className="hero__weather_hum">Hum: {Math.floor(weather.humidity)}</span>
                 </div>
-            </div>) : (<div style={{opacity: .5, fontSize: 15}}> Please, enter a valid city name <br />in top right corner<br /> to see weather data</div>)
+            </div>) : (<div style={{opacity: .5, fontSize: 12, fontWeight: 400}}> Please, enter a valid city name <br />in top right corner<br /> to see weather data</div>)
             }
             
         </div>

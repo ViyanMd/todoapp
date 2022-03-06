@@ -60,7 +60,7 @@ const ToDo = (props) => {
         }
 
         let list = [...todos];
-        list.push(newItem);
+        list.unshift(newItem);
 
         setTodos(list);
         setFiltered(list);
